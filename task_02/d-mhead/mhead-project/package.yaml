@@ -1,0 +1,25 @@
+name: mhead-project
+version: 0.1.0.0
+synopsis: Task_02d - Multiple implementations of head function
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  mhead-test:
+    main: Spec.hs
+    source-dirs: test
+    dependencies:
+      - mhead-project
+      - hspec
+      - QuickCheck
+
+  mhead-doctest:
+    main: doctest-driver.hs
+    source-dirs: test
+    dependencies:
+      - mhead-project
+      - doctest

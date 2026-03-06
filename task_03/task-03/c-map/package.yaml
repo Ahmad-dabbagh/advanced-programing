@@ -1,0 +1,17 @@
+name: c-map
+version: 0.1.0.0
+synopsis: Task_03c - Map and Lambda Expressions
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  c-map-doctest:
+    main: doctest-driver.hs
+    source-dirs: test
+    dependencies:
+      - c-map
+      - doctest

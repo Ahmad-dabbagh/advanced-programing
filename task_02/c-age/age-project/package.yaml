@@ -1,0 +1,11 @@
+name: age-project
+version: 0.1.0.0
+synopsis: Task_02c - Age Calculator with Type Safety
+
+dependencies:
+  - base >= 4.7 && < 5
+
+executables:
+  age-project:
+    main: Main.lhs
+    source-dirs: src

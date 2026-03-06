@@ -1,0 +1,17 @@
+name: a-tuples
+version: 0.1.0.0
+synopsis: Task_03a - Working with Tuples
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  a-tuples-doctest:
+    main: doctest-driver.hs
+    source-dirs: test
+    dependencies:
+      - a-tuples
+      - doctest

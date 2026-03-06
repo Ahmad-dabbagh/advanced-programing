@@ -1,0 +1,17 @@
+name: b-processing
+version: 0.1.0.0
+synopsis: Task_04b - Processing Student Lists
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  b-processing-doctest:
+    main: doctest-driver.hs
+    source-dirs: test
+    dependencies:
+      - b-processing
+      - doctest

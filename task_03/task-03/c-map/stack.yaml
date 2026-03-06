@@ -1,0 +1,5 @@
+# Stack 3.9.1 / GHC 9.10.3
+resolver: lts-24.28
+
+packages:
+- .

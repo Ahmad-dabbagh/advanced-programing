@@ -1,0 +1,49 @@
+image: golang:1.22
+
+default:
+  tags:
+    - csams
+
+stages:
+  - vet
+  - test
+  - build
+
+variables:
+  GOFLAGS: "-mod=readonly"
+  GOCACHE: "$CI_PROJECT_DIR/.gocache"
+  GOMODCACHE: "$CI_PROJECT_DIR/.gomodcache"
+  GOLANGCI_LINT_CACHE: "$CI_PROJECT_DIR/.golangci-lint-cache"
+
+cache:
+  key: "$CI_COMMIT_REF_SLUG"
+  paths:
+    - .gocache/
+    - .gomodcache/
+    - .golangci-lint-cache/
+
+before_script:
+  - mkdir -p "$GOCACHE" "$GOMODCACHE" "$GOLANGCI_LINT_CACHE"
+  - curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b "$(go env GOPATH)/bin" v1.59.1
+
+vet:
+  stage: vet
+  script:
+    - go version
+    - make vet
+
+test:
+  stage: test
+  script:
+    - go version
+    - make test
+
+build:
+  stage: build
+  script:
+    - go version
+    - make build
+  artifacts:
+    when: always
+    paths:
+      - bin/tictactoe

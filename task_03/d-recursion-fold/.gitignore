@@ -1,0 +1,16 @@
+# Stack
+.stack-work/
+
+# Cabal (generated from package.yaml)
+*.cabal
+
+# Compiled files
+*.hi
+*.o
+*.dyn_hi
+*.dyn_o
+
+# Editor
+*~
+*.swp
+*.swo

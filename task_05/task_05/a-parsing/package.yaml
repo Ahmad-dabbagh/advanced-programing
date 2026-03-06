@@ -1,0 +1,17 @@
+name: a-parsing
+version: 0.1.0.0
+synopsis: Task_05a - CSV Parsing
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  a-parsing-doctest:
+    main: doctest-driver.hs
+    source-dirs: test
+    dependencies:
+      - a-parsing
+      - doctest

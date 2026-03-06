@@ -1,0 +1,17 @@
+name: b-lists
+version: 0.1.0.0
+synopsis: Task_03b - Working with Lists
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  b-lists-doctest:
+    main: doctest-driver.hs
+    source-dirs: test
+    dependencies:
+      - b-lists
+      - doctest

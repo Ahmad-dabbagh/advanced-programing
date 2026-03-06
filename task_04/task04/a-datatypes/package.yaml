@@ -1,0 +1,17 @@
+name: a-datatypes
+version: 0.1.0.0
+synopsis: Task_04a - Custom Data Types
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  a-datatypes-doctest:
+    main: doctest-driver.hs
+    source-dirs: test
+    dependencies:
+      - a-datatypes
+      - doctest

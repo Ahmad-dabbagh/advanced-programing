@@ -1,0 +1,17 @@
+name: d-recursion-fold
+version: 0.1.0.0
+synopsis: Task_03d - Recursion and Folding
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  d-recursion-fold-doctest:
+    main: doctest-driver.hs
+    source-dirs: test
+    dependencies:
+      - d-recursion-fold
+      - doctest

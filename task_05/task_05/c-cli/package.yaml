@@ -1,0 +1,29 @@
+name: c-cli
+version: 0.1.0.0
+synopsis: Task_05c - CLI CRUD Application
+
+dependencies:
+  - base >= 4.7 && < 5
+  - directory
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Student
+    - Operations
+    - Parsing
+
+executables:
+  student-cli:
+    main: Main.hs
+    source-dirs: src
+    dependencies:
+      - c-cli
+
+tests:
+  c-cli-doctest:
+    main: doctest-driver.hs
+    source-dirs: test
+    dependencies:
+      - c-cli
+      - doctest
